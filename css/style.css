@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --color-primary: #444CF7;
+    --color-title: #000;
+    --align-title: left;
+    --padding-container: 100px 0;
+    --width-container: 90%;
+    --max-width-container: 1200px;
+    --color-btn: #444CF7;
+    --text-btn: #fff;
+    --padding-btn: 20px 35px;
+    --height-shape: 18em;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: radial-gradient(#444cf7 0.7000000000000001px, transparent 0.7000000000000001px), radial-gradient(#444cf7 0.7000000000000001px, #e5e5f7 0.7000000000000001px);
+    background-size: 28px 28px;
+    background-position: 0 0,14px 14px;
+}
+
+.container {
+    width: var(--max-width-container);
+    max-width: var(--max-width-container);
+    padding: var(--padding-container);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero{
+    height: 100vh;
+    min-width: 500px;
+    position: relative;
+    --padding-container: 0;
+}
+
+.hero::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: var(--height-shape);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    clip-path: polygon(0 100%, 100% 100% ,100% 0);
+}
+
+.hero_container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 3fr 2fr;
+    place-items: center;
+    gap: 20px;
+}
+
+.hero_title{
+    font-size: 4rem;
+}
+
+.hero_go{
+    display: inline;
+    background: var(--color-btn);
+    color: #fff;
+    padding: var(--padding-btn);
+    text-align: center;
+    text-decoration: none;
+}
+
+.hero_copy{
+    font-size: 1.2rem;
+    margin: 25px 0;
+}
+
+.hero_img{
+    width: 95%;
+}   
+
+.main{
+    background: #fff;
+}
+
+.title{
+    font-size: 2.5rem;
+    text-align: var(--align-title);
+    color: var(--color-title);
+
+}
+
+.title--border::after{
+    content: "";
+    display: block;
+    width: 100px;
+    margin-top: 20px;
+    height: 4px;
+    background: var(--color-primary);
+}
+
+.profile{   
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    --padding-container: 20px 60px;
+}
+
+.profile_container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.profile_name{
+    margin: 20px 0;
+}
+
+.profile_ocuppation{
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.profile_description{
+    text-align: left;
+    line-height: 1.5;
+    font-style: italic;
+    color: #615a5a;
+}
+
+.profile_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    place-items: center;
+}
+
+.about_study{
+    width: 90%;
+}
+
+.about_text{
+    margin: 20px 0;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.about_picture{
+    text-align: center;
+}
+.about_img{
+    width: 95%;
+}
+
+.card{
+    background: #f2f2f2;
+}
+
+.card_copy{
+    margin-top: 20px;
+}
+
+.card_container{
+    width: 99%;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  /*  grid-template-rows: repeat(4, 1fr);*/
+    gap: 20px;
+}
+
+.card_item{
+    padding: 20px;
+    background: #fff;
+    border-top: 5px solid #667eea;
+    box-shadow: 0 0 3xp rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card_picture{
+    background: var(--color-primary);
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title{
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.projects{
+    --color-title: #fff;
+    --color-btn: #fff;
+    --text-btn: #444CF7;
+    color: var(--color-title);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+   /* align-items: center;*/
+}
+
+.projects_about{
+    z-index: 100;
+    align-self: center;
+    width: 97%;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    background: var(--color-primary);
+    grid-column: 1/4;
+    grid-row: 2/-2;
+}
+
+.projects_picture{
+    margin: 0;
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+}
+
+.projects_img{
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+}
+
+.projects_picture--right{
+    grid-column: 1/4;
+}
+
+.projects_about--left{
+    grid-column: 3/-1;
+}
+
+.footer{
+    position: relative;
+    --padding-container: 160px 0 50px;
+}
+
+.footer::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.footer_contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    place-items: center;
+    margin-bottom: 30px;
+}
+
+.footer_copy{
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.footer_social{
+    display: flex;  
+    padding-top: 30px;
+    flex-wrap: wrap; 
+}
+
+.footer_link{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_icon{
+    width: 30px;   
+}
+
+.footer_figure{
+    margin: 0;
+}
+
+.footer_img{
+    width: 100%;
+}
+
+.footer_copyright{
+    padding-top: 30px;
+    border-top: 2px solid #918484;
+    text-align: center;
+}
+
+.footer_copyright::after{
+    content: "jsaldanag101@gmail.com";
+}
+
+@media screen and (max-width:768px){
+    :root{
+        --height-shape: 14em;
+    }
+
+    .hero_container{
+        --padding-container: 60px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .hero_img{
+        order: -1;
+        height: 95%;
+    }
+
+    .hero_title{
+        font-size: 3.8rem;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 80px;
+    }
+
+    .about_study{
+        width: 100%;
+    }
+
+    .about_picture{
+        order: -1;
+    }
+
+    .about_img{
+        width: 100%;
+    }
+
+    .card_container{
+       grid-template-columns: repeat(2,1fr);
+      /*  grid-template-rows: repeat(4, 1fr);*/
+        gap: 20px;
+
+}
+ 
