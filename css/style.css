@@ -32,7 +32,7 @@ body {
 
 .hero{
     height: 100vh;
-    min-width: 500px;
+    min-height: 500px;
     position: relative;
     --padding-container: 0;
 }
@@ -360,6 +360,112 @@ body {
        grid-template-columns: repeat(2,1fr);
       /*  grid-template-rows: repeat(4, 1fr);*/
         gap: 20px;
+    }
 
-}
+    .projects{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .projects_about{
+        grid-column: 1/6;
+    }
  
+    .projects_about--left{
+        grid-column: 2/-1;
+    }
+    
+    .projects_picture{
+        grid-column: 2/-1;
+    }
+
+    .projects_picture--right{
+        grid-column: 1/6;
+    }
+
+    .footer_contact{
+        grid-template-columns: 1fr;
+    }
+
+    .footer_text{
+        order: 1;
+        --align-title: center;
+    }
+
+    .footer_social{
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 500px){
+    :root{
+        --padding-btn: 20px 0;
+    }
+
+    .hero_container{
+        --padding-container: 45px 0;
+    }
+
+    .hero_texts{
+        text-align: center;
+    }
+
+    .hero_title{
+        font-size: 3rem;
+    }
+
+    .hero_go{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .hero_go{
+        display: block;
+    }
+
+    .profile{
+        --padding-container: 60px 0;
+    }
+
+    .profile_container{
+        width: 90%;
+    }
+
+    .about{
+        gap: 40px;
+    }
+
+    .about_study{ 
+        width: 100%;
+    }
+
+    .card_container{
+        width: 97%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+
+    .projects{
+        grid-template-columns: 1fr;
+        --padding-container: 80px 0 30px 0;
+    }
+
+    .projects--modifier{
+        --padding-container: 0 0 80px;
+    }
+
+    .projects_about{
+        padding: 20px 20px;
+        width: 95%;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+    }
+
+    .projects_picture{
+        display: none;
+    }
+}
