@@ -11,8 +11,18 @@
 </head>
 
 <body>
+    <div class="container_nav">
+        <nav>
+                <a class="nav_enlace" href="#hero_inicio">Inicio</a>
+                <a class="nav_enlace" href="#profile">Perfil</a>
+                <a class="nav_enlace" href="#study">Educación</a>
+                <a class="nav_enlace" href="#projects">Proyectos</a>
+                <a class="nav_enlace" href="#footer">Contacto</a> 
+        </nav>
+    </div>
+
     <header class="hero">
-        <div class="hero_container container">
+        <div class="hero_container container" id="hero_inicio">
             <div class="hero_texts">
                 <h1 class="hero_title"> Portfolio</h1>
                 <p class="hero_copy">A cerca de mi, proyectos, estudios y experiencias.</p>
@@ -54,7 +64,7 @@
         </section>
 
         <section class="card">
-            <div class="container">
+            <div class="container" id="study">
                 <h2 class="title">Educación</h2>
                 <p class="card_copy">Estudios y certificaciones.</p>
                 <div class="card_container">
@@ -104,7 +114,7 @@
 
         <section class="projects container">
             <figure class="projects_picture">
-                <img src="assets/undraw_coding_6mjf.svg" alt="codificando" class="projects_img">
+                <img src="assets/undraw_coding_6mjf.svg" alt="codificando" class="projects_img" id="projects">
             </figure>
             <div class="projects_about">
                 <h2 class="title">Proyectos y trabajos</h2>
@@ -127,12 +137,12 @@
                 <a href="#" class="button_go">¡Vamos!</a>
             </div>
         </section>
-        
+
     </main>
 
     <footer class="footer">
         <div class="footer_container container">
-            <div class="footer_contact">
+            <div class="footer_contact" id="footer">
                 <div class="footer_text">
                     <h2 class="title">Contáctame aquí</h2>
                     <p class="footer_copy">Puedes contactarme por cualquier medio o red social. </p>

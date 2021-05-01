@@ -323,10 +323,38 @@ body {
     content: "jsaldanag101@gmail.com";
 }
 
+.container_nav{
+    text-align: right;
+}  
+
+.nav_enlace{
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+   
+}
+
+.nav_enlace:hover{
+    background: #000
+}
+
+nav{
+    background: var(--color-primary);
+    padding: 10px;
+  /*  padding-left: 770px;*/
+    
+}
+
 @media screen and (max-width:768px) {
     :root {
         --height-shape: 14em;
     }
+    
+   .container_nav{
+       text-align: left;
+    }  
 
     .hero_container {
         --padding-container: 60px 0;
@@ -406,6 +434,10 @@ body {
         --padding-btn: 20px 0;
     }
 
+    .container_nav{
+        text-align: left;
+     }  
+     
     .hero_container {
         --padding-container: 45px 0;
     }
